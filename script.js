@@ -30,7 +30,7 @@ const GREEK_WORDS = [
   { word: "Yassou", meaning: "hello (to a friend)" },
   { word: "Filos", meaning: "friend" },
   { word: "Thálassa", meaning: "sea" },
-  { word: "Ílios", meaning: "sun" },
+  {word: "Fengári", meaning: "moon"},
   { word: "Eleftheria", meaning: "freedom" },
   { word: "Omorfia", meaning: "beauty" },
   { word: "Perípeteia", meaning: "adventure" },
@@ -51,7 +51,7 @@ const GREEK_WORDS = [
   { word: "Sofía", meaning: "wisdom" },
   { word: "Anoixi", meaning: "spring (the season)" },
   { word: "Nisí", meaning: "island" },
-  { word: "Fengári", meaning: "moon" },
+  { word: "Ílios", meaning: "sun" },
   { word: "Asteri", meaning: "star" },
 ];
 
