@@ -7,7 +7,7 @@
    ✏️ 1. SET THE ERASMUS START DATE HERE
    Format: "YYYY-MM-DD"  (this counts as Day 1)
    ──────────────────────────────────────────────────────────────────────── */
-const START_DATE = "2026-09-01";
+const START_DATE = "2026-07-01";
 
 /* Total length of the exchange. Day TOTAL_DAYS is the last day of letters. */
 const TOTAL_DAYS = 180;
@@ -105,7 +105,7 @@ function positionSun(day) {
 }
 
 function renderDay(entry, day) {
-  setText("dayLabel", `Day ${day} of ${TOTAL_DAYS}`);
+  setText("dayLabel", `Day ${day}`);
   setText("quoteText", entry.quote);
   setText("quoteAuthor", entry.author ? entry.author : "");
 
@@ -127,13 +127,9 @@ function renderGreekWord(day) {
   setText("greekMeaning", `— ${entry.meaning}`);
 }
 
-function setupSpotifyButton() {
-  const btn = document.getElementById("spotifyButton");
-  if (btn) btn.href = SPOTIFY_PLAYLIST_URL;
-}
+
 
 async function init() {
-  setupSpotifyButton();
 
   const day = getCurrentDay();
 
