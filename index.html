@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To the joy of sharing love through letters</title>
+<meta name="description" content="A daily letter for a friend on Erasmus in Greece.">
+
+<!-- Fonts: Fraunces (display, warm & classical) + Work Sans (clean body text) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Aegean sky backdrop -->
+<div class="sky" aria-hidden="true"></div>
+
+<main class="postcard">
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header">
+    <p class="eyebrow">a letter that finds you every day &middot; Erasmus in Greece</p>
+    <h1 class="title">To the joy of sharing<br>love through letters</h1>
+    <svg class="branch" viewBox="0 0 220 60" aria-hidden="true">
+      <path class="branch-stem" d="M10 30 C 60 10, 160 10, 210 30" fill="none"/>
+      <g class="branch-leaves">
+        <ellipse cx="40" cy="22" rx="9" ry="4.2" transform="rotate(-25 40 22)"/>
+        <ellipse cx="70" cy="14" rx="9" ry="4.2" transform="rotate(-10 70 14)"/>
+        <ellipse cx="100" cy="11" rx="9" ry="4.2" transform="rotate(2 100 11)"/>
+        <ellipse cx="130" cy="12" rx="9" ry="4.2" transform="rotate(12 130 12)"/>
+        <ellipse cx="160" cy="18" rx="9" ry="4.2" transform="rotate(22 160 18)"/>
+        <ellipse cx="188" cy="26" rx="9" ry="4.2" transform="rotate(30 188 26)"/>
+      </g>
+    </svg>
+  </header>
+
+  <!-- ============================================================
+       DAY COUNTER + HORIZON PROGRESS BAR
+       (the "sun" marker position = journey progress)
+       ============================================================ -->
+  <section class="day-panel" aria-live="polite">
+    <p class="day-label" id="dayLabel">Day 1 of 180</p>
+
+    <div class="horizon" role="img" aria-label="Journey progress">
+      <svg class="horizon-svg" viewBox="0 0 300 60" preserveAspectRatio="none">
+        <line class="horizon-line" x1="0" y1="48" x2="300" y2="48"/>
+      </svg>
+      <div class="sun" id="sunMarker"></div>
+    </div>
+
+    <p class="day-sub" id="daySub">of your Erasmus journey</p>
+  </section>
+
+  <!-- ============================================================
+       QUOTE CARD
+       ============================================================ -->
+  <section class="quote-card" id="quoteCard">
+    <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+    <blockquote>
+      <p class="quote-text" id="quoteText">Loading today's letter…</p>
+      <footer class="quote-author" id="quoteAuthor"></footer>
+    </blockquote>
+  </section>
+
+  <!-- ============================================================
+       PERSONAL MESSAGE
+       ============================================================ -->
+  <section class="message-card" id="messageCard">
+    <p class="message-label">a little note, just for you</p>
+    <p class="message-text" id="messageText"></p>
+  </section>
+
+  <!-- ============================================================
+       GREEK WORD OF THE DAY
+       ============================================================ -->
+  <section class="greek-card" id="greekCard">
+    <p class="greek-eyebrow">word of the day</p>
+    <p class="greek-word" id="greekWord">Kalimera</p>
+    <p class="greek-meaning" id="greekMeaning">— good morning</p>
+  </section>
+
+  <!-- ============================================================
+       MEMORY SECTION
+       Add your own photos here — see README.md, section "Adding photos".
+       ============================================================ -->
+  <section class="memory-card">
+    <p class="section-label">memories, for later</p>
+    <p class="section-hint">A little gallery, waiting to be filled as your journey unfolds.</p>
+
+    <!--
+      ================= HOW TO ADD PHOTOS =================
+      1. Put your image file inside the /images folder, e.g. images/day12.jpg
+      2. Copy one <figure> block below and change the src + caption.
+      3. Keep images reasonably small (under ~500KB) so the page loads fast.
+      =======================================================
+    -->
+    <div class="memory-grid" id="memoryGrid">
+      <figure class="memory-slot memory-placeholder">
+        <span>+</span>
+      </figure>
+      <figure class="memory-slot memory-placeholder">
+        <span>+</span>
+      </figure>
+      <figure class="memory-slot memory-placeholder">
+        <span>+</span>
+      </figure>
+
+      <!-- Example of a filled slot — copy this pattern once you have photos:
+      <figure class="memory-slot">
+        <img src="images/day12.jpg" alt="Sunset in Chania">
+        <figcaption>Day 12 — Chania sunset</figcaption>
+      </figure>
+      -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPOTIFY PLACEHOLDER
+       Replace the href below with a real playlist link whenever you like.
+       ============================================================ -->
+  <section class="spotify-card">
+    <p class="section-label">a soundtrack for today</p>
+    <a class="spotify-button" id="spotifyButton" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="spotify-icon" aria-hidden="true">
+        <path d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0Zm5.5 17.3a.75.75 0 0 1-1.03.26c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.58-1.04 8.5-.6 11.65 1.33a.75.75 0 0 1 .26 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 1 1-.55-1.8c4.36-1.32 9.78-.68 13.5 1.6a.94.94 0 0 1 .31 1.29Zm.13-3.4C15.98 8.4 9.6 8.18 5.9 9.3a1.13 1.13 0 1 1-.66-2.16c4.25-1.29 11.28-1.03 15.72 1.62a1.13 1.13 0 1 1-1.16 1.94Z"/>
+      </svg>
+      <span>Open today's playlist</span>
+    </a>
+    <p class="section-hint small">(placeholder — link a real Spotify playlist whenever you're ready)</p>
+  </section>
+
+  <!-- ============================================================
+       "AFTER DAY 180" MESSAGE (hidden unless journey has ended)
+       ============================================================ -->
+  <section class="ending-card hidden" id="endingCard">
+    <p class="ending-eyebrow">180 days later</p>
+    <h2 class="ending-title">A new beginning</h2>
+    <p class="ending-text">
+      The letters end here, but the story doesn't. Whoever you became on this journey — braver,
+      more curious, a little more free — gets to keep all of it. Welcome home. I can't wait to
+      hear everything.
+    </p>
+    <p class="ending-signoff">With so much love,<br>Gremlin ❤️</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>Gremlin ❤️</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
