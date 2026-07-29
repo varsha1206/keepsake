@@ -7,10 +7,10 @@
    ✏️ 1. SET THE ERASMUS START DATE HERE
    Format: "YYYY-MM-DD"  (this counts as Day 1)
    ──────────────────────────────────────────────────────────────────────── */
-const START_DATE = "2026-07-01";
+const START_DATE = "2026-09-15";
 
 /* Total length of the exchange. Day TOTAL_DAYS is the last day of letters. */
-const TOTAL_DAYS = 180;
+const TOTAL_DAYS = 164;
 
 /* ────────────────────────────────────────────────────────────────────────
    ✏️ 2. SPOTIFY PLAYLIST LINK
@@ -56,7 +56,12 @@ const GREEK_WORDS = [
 ];
 
 /* ──────────────────────────────────────────────────────────────────────── */
-
+function renderNotStarted() {
+  document.querySelectorAll(".postcard > *").forEach((el) => el.classList.add("hidden"));
+  const el = document.getElementById("notStartedCard");
+  el.classList.remove("hidden");
+  el.classList.add("fade-in");
+}
 /**
  * Calculates the current Erasmus day number (1-indexed).
  * Day 1 = START_DATE. Anything before START_DATE also shows Day 1,
@@ -133,6 +138,10 @@ async function init() {
 
   const day = getCurrentDay();
 
+  if (day < 1) {
+  renderNotStarted();
+  return;
+}
   if (day > TOTAL_DAYS) {
     renderJourneyEnded();
     return;

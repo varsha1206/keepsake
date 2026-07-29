@@ -257,6 +257,20 @@ blockquote {
   color: var(--ink);
 }
 
+/* Not started state */
+.not-started {
+  text-align: center;
+}
+
+.not-started-text {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
 /* Greek word of the day */
 .greek-card { text-align: center; }
 .greek-word {
