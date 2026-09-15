@@ -7,7 +7,7 @@
    ✏️ 1. SET THE ERASMUS START DATE HERE
    Format: "YYYY-MM-DD"  (this counts as Day 1)
    ──────────────────────────────────────────────────────────────────────── */
-const START_DATE = "2026-09-15";
+const START_DATE = "2026-09-22";
 
 /* Total length of the exchange. Day TOTAL_DAYS is the last day of letters. */
 const TOTAL_DAYS = 164;
